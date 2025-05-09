@@ -20,10 +20,22 @@ def classificar_urgencia(sintomas):
     return "Leve"  # padrão se não encontrar correspondência
 
 def solicitar_dados():
-    cpf = input("Digite o CPF: ")
-    nome = input("Digite o nome completo: ")
-    endereco = input("Digite o endereço: ")
-    idade = input("Digite a idade: ")
+    cpf = (input("Digite o CPF: "))
+    while len(cpf) < 11 or len(cpf) > 11:
+        print("CPF inválido. O CPF deve ter 11 dígitos.")
+        cpf = input("Digite o CPF: ")
+    nome = (input("Digite o nome completo: "))
+    while len(nome) < 3 or len(nome) > 100:
+        print("Nome inválido. O nome deve ter pelo menos 3 caracteres.")
+        nome = input("Digite o nome completo: ")
+    endereco = (input("Digite o endereço: "))
+    while len(endereco) < 3 or len(endereco) > 100:
+        print("Endereço inválido. O endereço deve ter pelo menos 3 caracteres.")
+        endereco = input("Digite o endereço: ")
+    idade = int(input("Digite a idade: "))
+    while idade < 0 or idade > 120:
+        print("Idade inválida. A idade deve estar entre 0 e 120 anos.")
+        idade = int(input("Digite a idade: "))
     peso = input("Digite o peso: ")
     sintomas = input("Descreva os sintomas: ")
 
