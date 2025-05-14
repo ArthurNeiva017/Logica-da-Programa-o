@@ -1,8 +1,8 @@
-<h1 align="center">💻 Logica da Programação</h1>
+<h1 align="center">💻Logica da Programação</h1>
 
 ###
 
-<h2 align="left">🤖 Tecnologias</h2>
+<h2 align="left">📡Tecnologias</h2>
 
 ###
 
@@ -12,24 +12,34 @@
 
 ###
 
-<h2 align="left">🚀 Status do GitHub</h2>
+<h2 align="left">🤝Colaboradores</h2>
 
 ###
 
 <div align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ArthurNeiva017&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=4&theme=dark&hide_border=false" height="150" alt="languages graph"  />
+  <a href="https://github.com/ArthurNeiva017" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Arthur%20Neiva&logo=gitlab&label=&color=FF0000&logoColor=red&labelColor=000000&style=for-the-badge" height="35" alt="gitlab logo"  />
+  </a>
 </div>
 
 ###
 
-<h2 align="left">📊 Contribution´s GitHub</h2>
+<h2 align="left">🔥Status GitHub</h2>
 
 ###
 
-<br clear="both">
+<div align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ArthurNeiva017&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=11&theme=highcontrast&hide_border=false" height="150" alt="languages graph"  />
+</div>
+
+###
+
+<h2 align="left">📊 Contribuições GitHub</h2>
+
+###
 
 <div align="left">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ArthurNeiva017&radius=16&theme=github-dark&area=true&order=5" height="300" alt="activity-graph graph"  />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ArthurNeiva017&radius=19&theme=high-contrast&area=true&order=5&line=FFFF00&title_color=FFFF00&area_color=FFFF00&color=00FFFF&hide_border=false&hide_title=false" height="300" alt="activity-graph graph"  />
 </div>
 
 ###
