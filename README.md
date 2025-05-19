@@ -1,13 +1,17 @@
-<h1 align="center">💻Logica da Programação</h1>
+<h1 align="center">📚 Banco de Dados</h1>
 
 ###
 
-<h2 align="left">📡Tecnologias</h2>
+<h2 align="left">🤖Tecnologias</h2>
 
 ###
 
 <div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="30" alt="mysql logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="30" alt="vscode logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
 </div>
 
 ###
@@ -16,9 +20,11 @@
 
 ###
 
+<br clear="both">
+
 <div align="left">
   <a href="https://github.com/ArthurNeiva017" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Arthur%20Neiva&logo=gitlab&label=&color=FF0000&logoColor=red&labelColor=000000&style=for-the-badge" height="35" alt="gitlab logo"  />
+    <img src="https://img.shields.io/static/v1?message=Arthur%20neiva&logo=gitlab&label=&color=FF0000&logoColor=red%20&labelColor=000000&style=for-the-badge" height="35" alt="gitlab logo"  />
   </a>
 </div>
 
@@ -29,7 +35,7 @@
 ###
 
 <div align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ArthurNeiva017&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=11&theme=highcontrast&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ArthurNeiva017&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=8&theme=highcontrast&hide_border=false" height="150" alt="languages graph"  />
 </div>
 
 ###
