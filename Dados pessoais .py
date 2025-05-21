@@ -24,6 +24,11 @@ while estado_civil not in ['Solteiro', 'Casado', 'Viuvo', 'Divorciado']:
     print("Estado civil inválido. O estado civil deve ser Solteiro, Casado, Viuvo ou Divorciado.")
     estado_civil = input("Digite seu estado civil Solteiro/Casado/Viuvo/Divorciado: ")
 
+if sexo == 'M':
+    sexo = 'Masculino'
+elif sexo == 'F':
+    sexo = 'Feminino'
+
 print("Cadastro realizado com sucesso!")
 print(f''' 
       
