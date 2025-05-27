@@ -1,21 +1,27 @@
-Lista_de_operações = []
+Historico_operações_adição = []
+Historico_operações_subtração = []
+Historico_operações_multiplicação = []
+Historico_operações_divisão = []
+Historico_operações_potenciação = []
+Historico_operações_raiz = []
+Historico_operações_media_aritmética = []
 
 def add(num1, num2):
     return num1 + num2
 def subtract(num1, num2):
     return num1 - num2
 def multiply(num1, num2):
-        return num1 * num2
+    return num1 * num2
 def divide(num1, num2):
     if num2 == 0:
-        return "Divisão por zero não é permitida."
+        return "Erro: Divisão por zero não é permitida."
     return num1 / num2
 def power(num1, num2):
-        return num1 ** num2
+    return num1 ** num2
 def square_root(num1):
     if num1 < 0:
-        return "Raiz quadrada de número negativo não é permitida."
-    return num1 ** 0.5
+        return "Erro: Raiz quadrada de número negativo não é permitida."
+    return num1 ** (1/2)
 def media_aritimetica(valores):
         Soma = 0
         for i in range(valores):
@@ -24,107 +30,151 @@ def media_aritimetica(valores):
         media = (Soma) / valores
         return media
 
-operação = input("Sekecione a operação desejada: \n1. Adição\n2. Subtração\n3. Multiplicação\n4. Divisão\n5. Potência\n6. Raiz Quadrada\n7. Média Aritimética\n9. Historico de Operações\n")
+operações =  input("Selecione a operação desejada\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n6 - Raiz Quadrada\n7 - Média Aritmética\n7 - Histórico de operações\n")
+if operações != "1" and operações != "2" and operações != "3" and operações != "4" and operações != "5" and operações != "6" and operações != "7" and operações != "8":
+    print("Operação inválida. Por favor, selecione uma operação válida.")
 
-if operação == '1':
-     num1 = int(input("Digite o primeiro número: "))
-     num2 = int(input("Digite o segundo número: "))
-     resultado_adição = add(num1, num2)
-     print(f'Resultado: {num1} + {num2} = {resultado_adição}')
-     Lista_de_operações.append(resultado_adição)
-elif operação == '2':
-     num1 = int(input("Digite o primeiro número: "))
-     num2 = int(input("Digite o segundo número: "))
-     resultado_subtração = subtract(num1, num2)
-     print(f'Resultado: {num1} - {num2} = {resultado_subtração}')
-     Lista_de_operações.append(resultado_subtração)
-elif operação == '3':
-        num1 = int(input("Digite o primeiro número: "))
-        num2 = int(input("Digite o segundo número: "))
-        resultado_multiplicação = multiply(num1, num2)
-        print(f'Resultado: {num1} * {num2} = {resultado_multiplicação}')
-        Lista_de_operações.append(resultado_multiplicação)
-elif operação == '4':
-        num1 = int(input("Digite o primeiro número: "))
-        num2 = int(input("Digite o segundo número: "))
-        resultado_divisão = divide(num1, num2)
-        print(f'Resultado: {num1} / {num2} = {resultado_divisão}')
-        Lista_de_operações.append(resultado_divisão)
-elif operação == '5':
-        num1 = int(input("Digite o primeiro número: "))
-        num2 = int(input("Digite o segundo número: "))
-        resultado_potência = power(num1, num2)
-        print(f'Resultado: {num1} ^ {num2} = {resultado_potência}')
-        Lista_de_operações.append(resultado_potência)
-elif operação == '6':
-        num1 = int(input("Digite o número: "))
-        resultado_raiz_quadrada = square_root(num1)
-        print(f'Resultado: √{num1} = {resultado_raiz_quadrada}')
-        Lista_de_operações.append(resultado_raiz_quadrada)
-elif operação == '7':
-        valores = int(input("Quantos números deseja calcular a média: "))
-        resultado_media_aritimetica = media_aritimetica(valores)
-        print(f'Resultado: {resultado_media_aritimetica}')
-        Lista_de_operações.append(resultado_media_aritimetica)
-elif operação == '9':
-        if len(Lista_de_operações) == 0:
-            print("Nenhuma operação foi realizada.")
-        else:
-          print(f'Esse é o histórico de operações: {Lista_de_operações}')
-if operação != "1" and operação != "2" and operação != "3" and operação != "4" and operação != "5" and operação != "6" and operação != "7" and operação != "9":
-    print("Operação inválida.")
+if operações == "1":
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+    resultado = add(num1, num2)
+    ope_adição = f"{num1} + {num2} = {resultado}"
+    print(f'{num1} + {num2} = {resultado}')
+    Historico_operações_adição.append(ope_adição)
+elif operações == "2":
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+    resultado = subtract(num1, num2)
+    ope_subtração = f"{num1} - {num2} = {resultado}"
+    print(f'{num1} - {num2} = {resultado}')
+    Historico_operações_subtração.append(ope_subtração)
+elif operações == "3":
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+    resultado = multiply(num1, num2)
+    ope_Mutiplicação = f"{num1} x {num2} = {resultado}"
+    print(f'{num1} x {num2} = {resultado}')
+    Historico_operações_multiplicação.append(ope_Mutiplicação)
+elif operações == "4":
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+    resultado = divide(num1, num2)
+    ope_divisão = f"{num1} / {num2} = {resultado}"
+    print(f'{num1} / {num2} = {resultado}')
+    Historico_operações_divisão.append(ope_divisão)
+elif operações == "5":
+    num1 = int(input("Digite a base: "))
+    num2 = int(input("Digite o expoente: "))
+    resultado = power(num1, num2)
+    ope_potenciação = f"{num1} ^ {num2} = {resultado}"
+    print(f'{num1} ^ {num2} = {resultado}')
+    Historico_operações_potenciação.append(ope_potenciação)
+elif operações == "6":
+    num1 = int(input("Digite o número: "))
+    resultado = square_root(num1)
+    ope_raiz_quadrada = f" √{num1} = {resultado}"
+    print(f'√{num1} = {resultado}')
+    Historico_operações_raiz.append(ope_raiz_quadrada)
+elif operações == "7":
+    valores = int(input("Quantos números deseja calcular a média aritmética? "))
+    resultado = media_aritimetica(valores)
+    ope_media_aritimetica = f"Média Aritmética dos {valores} números = {resultado}"
+    print(f'Média Aritmética dos {valores} números = {resultado}')
+    Historico_operações_media_aritmética.append(ope_media_aritimetica)
+elif operações == "8":
+    historicos = input("Selecione o histórico desejado\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n6 - Raiz Quadrada\n7 - Média Aritmética\n8 - histórico de operações\n")
+    if len(Historico_operações_adição ) == 0 and len(Historico_operações_subtração) == 0 and len(Historico_operações_multiplicação) == 0 and len(Historico_operações_divisão) == 0 and len(Historico_operações_potenciação) == 0 and len(Historico_operações_raiz) == 0 and len(Historico_operações_media_aritmética) == 0:
+        print("Nenhum histórico disponível.")
+        if historicos == "1":
+            print(f"Histórico de Adição: {Historico_operações_adição}")
+    elif historicos == "2":
+        print(f"Histórico de Subtração: {Historico_operações_subtração}")
+    elif historicos == "3":
+        print(f"Histórico de Multiplicação: {Historico_operações_multiplicação}")
+    elif historicos == "4":
+        print(f"Histórico de Divisão: {Historico_operações_divisão}")
+    elif historicos == "5":
+        print(f"Histórico de Potenciação: {Historico_operações_potenciação}")
+    elif historicos == "6":
+        print(f"Histórico de Raiz Quadrada: {Historico_operações_raiz}")
+    elif historicos == "7":
+        print(f"Histórico de Média Aritmética: {Historico_operações_media_aritmética}")
+    else:
+        print("Opção inválida. Por favor, selecione uma operação válida.")
 
 while True:
-      continuar = input("Deseja continuar? (s/n): ")
-      if continuar.lower() == 'n':
-            print("Encerrando o programa.")
-            break
-      elif continuar.lower() == 's':
-            operação = input("Selecione a operação desejada: \n1. Adição\n2. Subtração\n3. Multiplicação\n4. Divisão\n5. Potência\n6. Raiz Quadrada\n7. Média Aritimética\n9. Histórico de Operações\n")
-            if operação == '1':
-                num1 = int(input("Digite o primeiro número: "))
-                num2 = int(input("Digite o segundo número: "))
-                resultado_adição = add(num1, num2)
-                print(f'Resultado: {num1} + {num2} = {resultado_adição}')
-                Lista_de_operações.append(resultado_adição)
-            elif operação == '2':
-                num1 = int(input("Digite o primeiro número: "))
-                num2 = int(input("Digite o segundo número: "))
-                resultado_subtração = subtract(num1, num2)
-                print(f'Resultado: {num1} - {num2} = {resultado_subtração}')
-                Lista_de_operações.append(resultado_subtração)
-            elif operação == '3':
-                    num1 = int(input("Digite o primeiro número: "))
-                    num2 = int(input("Digite o segundo número: "))
-                    resultado_multiplicação = multiply(num1, num2)
-                    print(f'Resultado: {num1} * {num2} = {resultado_multiplicação}')
-                    Lista_de_operações.append(resultado_multiplicação)
-            elif operação == '4':
-                    num1 = int(input("Digite o primeiro número: "))
-                    num2 = int(input("Digite o segundo número: "))
-                    resultado_divisão = divide(num1, num2)
-                    print(f'Resultado: {num1} / {num2} = {resultado_divisão}')
-                    Lista_de_operações.append(resultado_divisão)
-            elif operação == '5':
-                    num1 = int(input("Digite o primeiro número: "))
-                    num2 = int(input("Digite o segundo número: "))
-                    resultado_potência = power(num1, num2)
-                    print(f'Resultado: {num1} ^ {num2} = {resultado_potência}')
-                    Lista_de_operações.append(resultado_potência)
-            elif operação == '6':
-                    num1 = int(input("Digite o número: "))
-                    resultado_raiz_quadrada = square_root(num1)
-                    print(f'Resultado: √{num1} = {resultado_raiz_quadrada}')
-                    Lista_de_operações.append(resultado_raiz_quadrada)
-            elif operação == '7':
-                    valores = int(input("Quantos números deseja calcular a média: "))
-                    resultado_media_aritimetica = media_aritimetica(valores)
-                    print(f'Resultado: {resultado_media_aritimetica}')
-                    Lista_de_operações.append(resultado_media_aritimetica)
-            elif operação == '9':
-                    if len(Lista_de_operações) == 0:
-                        print("Nenhuma operação foi realizada.")
-                    else:
-                      print(f'Esse é o histórico de operações: {Lista_de_operações}')
-            else:
-                print("Operação inválida.")
+    continuar = input("Deseja realizar outra operação? (s/n): ").lower()
+    if continuar == 'n':
+        print("Obrigado por usar a calculadora!")
+        break
+    elif continuar == 's':
+        operações =  input("Selecione a operação desejada\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n6 - Raiz Quadrada\n7 - Média Aritmética\n8 - Histórico de operações\n")
+        if operações != "1" and operações != "2" and operações != "3" and operações != "4" and operações != "5" and operações != "6" and operações != "7" and operações != "8":
+            print("Operação inválida. Por favor, selecione uma operação válida.")
+        if operações == "1":
+            num1 = int(input("Digite o primeiro número: "))
+            num2 = int(input("Digite o segundo número: "))
+            resultado = add(num1, num2)
+            ope_adição = f"{num1} + {num2} = {resultado}"
+            print(f'{num1} + {num2} = {resultado}')
+            Historico_operações_adição.append(ope_adição)
+        elif operações == "2":
+            num1 = int(input("Digite o primeiro número: "))
+            num2 = int(input("Digite o segundo número: "))
+            resultado = subtract(num1, num2)
+            ope_subtração = f"{num1} - {num2} = {resultado}"
+            print(f'{num1} - {num2} = {resultado}')
+            Historico_operações_subtração.append(ope_subtração)
+        elif operações == "3":
+            num1 = int(input("Digite o primeiro número: "))
+            num2 = int(input("Digite o segundo número: "))
+            resultado = multiply(num1, num2)
+            ope_Mutiplicação = f"{num1} x {num2} = {resultado}"
+            print(f'{num1} x {num2} = {resultado}')
+            Historico_operações_multiplicação.append(ope_Mutiplicação)
+        elif operações == "4":
+            num1 = int(input("Digite o primeiro número: "))
+            num2 = int(input("Digite o segundo número: "))
+            resultado = divide(num1, num2)
+            ope_divisão = f"{num1} / {num2} = {resultado}"
+            print(f'{num1} / {num2} = {resultado}')
+            Historico_operações_divisão.append(ope_divisão)
+        elif operações == "5":
+            num1 = int(input("Digite a base: "))
+            num2 = int(input("Digite o expoente: "))
+            resultado = power(num1, num2)
+            ope_potenciação = f"{num1} ^ {num2} = {resultado}"
+            print(f'{num1} ^ {num2} = {resultado}')
+            Historico_operações_potenciação.append(ope_potenciação)
+        elif operações == "6":
+            num1 = int(input("Digite o número: "))
+            resultado = square_root(num1)
+            ope_raiz_quadrada = f" √{num1} = {resultado}"
+            print(f'√{num1} = {resultado}')
+            Historico_operações_raiz.append(ope_raiz_quadrada)
+        elif operações == "7":
+            valores = int(input("Quantos números deseja calcular a média aritmética? "))
+            resultado = media_aritimetica(valores)
+            ope_media_aritimetica = f"(Média Aritmética dos {valores} números = {resultado})"
+            print(f'Média Aritmética dos {valores} números = {resultado}')
+            Historico_operações_media_aritmética.append(ope_media_aritimetica)
+        elif operações == "8":
+            historicos = input("Selecione o histórico desejado\n1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Potenciação\n6 - Raiz Quadrada\n7 - Média Aritmética\n")
+            if len(Historico_operações_adição ) == 0 and len(Historico_operações_subtração) == 0 and len(Historico_operações_multiplicação) == 0 and len(Historico_operações_divisão) == 0 and len(Historico_operações_potenciação) == 0 and len(Historico_operações_raiz) == 0 and len(Historico_operações_media_aritmética) == 0:
+                print("Nenhum histórico disponível.")
+            elif historicos == "1":
+                print(f"Histórico de Adição: {Historico_operações_adição}")
+            elif historicos == "2":
+                print(f"Histórico de Subtração: {Historico_operações_subtração}")
+            elif historicos == "3":
+                print(f"Histórico de Multiplicação: {Historico_operações_multiplicação}")
+            elif historicos == "4":
+                print(f"Histórico de Divisão: {Historico_operações_divisão}")
+            elif historicos == "5":
+                print(f"Histórico de Potenciação: {Historico_operações_potenciação}")
+            elif historicos == "6":
+                print(f"Histórico de Raiz Quadrada: {Historico_operações_raiz}")
+            elif historicos == "7":
+                print(f"Histórico de Média Aritmética: {Historico_operações_media_aritmética}")
+        else:
+            print("Operação inválida. Por favor, selecione uma operação válida.")
